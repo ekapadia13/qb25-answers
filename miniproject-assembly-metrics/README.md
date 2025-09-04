@@ -16,15 +16,11 @@
 2) Run your script using ./[script name] [c.remanei genome] for each of the 4 assemblies
 
 ## Results Summary:
-1) Number of contigs: 1591 , Total Length: 118549266 , Average Length: 74512.42363293526
-
+1) Number of contigs: 1591 , Total Length: 118549266 , Average Length: 74512.42363293526. 
 1522088 is the sequence length of the shortest contig at 50% of the total assembly length
-2) Number of contigs: 912 , Total Length: 124541912 , Average Length: 136559.11403508772
-
+2) Number of contigs: 912 , Total Length: 124541912 , Average Length: 136559.11403508772. 
 1765890 is the sequence length of the shortest contig at 50% of the total assembly length
-3) Number of contigs: 3670 , Total Length: 145442736 , Average Length: 39630.17329700272
-
+3) Number of contigs: 3670 , Total Length: 145442736 , Average Length: 39630.17329700272. 
 435512 is the sequence length of the shortest contig at 50% of the total assembly length
-4) Number of contigs: 187 , Total Length: 130480874 , Average Length: 697758.6844919786
-
+4) Number of contigs: 187 , Total Length: 130480874 , Average Length: 697758.6844919786. 
 21501900 is the sequence length of the shortest contig at 50% of the total assembly length
