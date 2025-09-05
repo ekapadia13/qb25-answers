@@ -39,7 +39,7 @@ ggplot(data = dt, aes(x = Liver)) +
   ) + 
   theme_classic()
 
-#Looking at the histogram distribution, most of the genes in the liver have very low TPMs, at zero or close to zero. There are only some genes which are expressed at high levels. This tells us that the liver only really expresses a fraction of its genes. I think this is common to other tissues, which I can partially support due to looking at Brain-Hippocampus.
+#Looking at the histogram distribution, they are very right-skewed, with most of the genes in the liver have very low TPMs, at zero or close to zero. Every cell in our body (except germ cells) have the same genome, however, all cells don't express all genes. There are only some genes which are expressed at high levels, these being the genes specifically related for those tissues. This is common to other tissues, which I can see by looking at Brain-Hippocampus.
 
 ggplot(data = dt, aes(x = `Brain - Hippocampus`)) + 
   geom_histogram(breaks = seq(0, 100, 2), fill = "pink") +
