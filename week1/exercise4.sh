@@ -10,6 +10,7 @@ bedtools intersect -a hg19-kc.bed -b snps-chr1.bed -c > snp_amount | sort -k5,5n
 bedtools sample -i snp_amount -n 20 -seed 42 > snp_subset 
 bedtools sort -i snp_subset > snp_subset_sorted
 bedtools sort -i hg19-kc.bed > hg19-kc_sorted.bed
+bedtools closest -a snp_subset_sorted -b hg19_kc_sorted_sorted -d -t first > in_out               
 #they are all inside the gene
 
 
