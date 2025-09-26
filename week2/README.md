@@ -11,3 +11,7 @@ When looking in igv, it seems that samples 2, 5, and 6 have similar visualizatio
 
 # Exercise 4:
 minimap2 -a -x map-ont ../genomes/sacCer3.fa ERR8562478.fastq > longreads.sam
+
+# Exercise 5:
+hisat2 -p 4 -x ../rawdata/sacCer3 -U ../rawdata/SRR10143769.fastq > map_genome_SRR10143769.sam
+    # the 3' ends of the genes seem to all have the most coverage 
