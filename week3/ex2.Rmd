@@ -1,0 +1,52 @@
+---
+title: "ex2"
+output: html_document
+date: "2025-10-01"
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Plot Allele Frequency
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+```{r}
+setwd("/Users/cmdb/qb25-answers/week3")
+library(tidyverse)
+
+AF <- read_csv("/Users/cmdb/qb25-answers/week3/AF.txt")
+
+ggplot(data = AF, aes(x = AF)) + 
+  geom_histogram(bins = 11, fill = "violetred4") +  
+  labs( #this is used to label the axes
+    x = "Allele Frequency" ,
+    y = "Number of Variants" , 
+    title = "Allele Frequencies Between 10 Yeast Segregants"
+  ) +
+  theme_classic()
+
+### ANSWERS TO QUESTIONS ###
+# After recombination, offspring should roughly have a 50/50 split in whether they have one or the other parent's allele. So looking at multiple individuals, at a given location it should be a 0.5 frequency. This is what we see with our plot, where there is mostly 0.5, and then there is a roughly normal curve for the other values. 
+# This is a normal distribution
+```
+
+```{r}
+
+DP <- read_csv("/Users/cmdb/qb25-answers/week3/DP.txt")
+
+ggplot(data = DP, aes(x = DP)) +
+  geom_histogram(bins = 21, fill = "saddlebrown") + 
+  xlim(0, 20) +
+  labs( #this is used to label the axes
+    x = "Read Depth" ,
+    y = "Number of Variants" , 
+    title = "Read Depth of Variants Between 10 Yeast Segregants"
+  ) +
+  theme_classic()
+
+### ANSWERS TO QUESTIONS ###
+# This figure shows how many times each variant's genome was sequenced. Ex, one variant, who would theoretically be a lone mutant, wouldn't be common amongst all the other yeast, so they would probabalistically be sequenced less, and have a lower read depth. Having also looked at tll the x values, and not just the xlim(0,20), I see that there are variants which have very large read depths. Therefore, this makes sense that we see a lot of variants which have very low read depths, because there are probably a lot of variants which are random mutations and lone soldiers, however that isn't representative of the "wildtype" genome and especially so many different versions due to recombinants are going to be small in number. Therefore, this also maps to the read depth values being low
+# This is a right-tailed/right-skewed distribution
+```
