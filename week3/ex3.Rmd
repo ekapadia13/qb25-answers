@@ -43,7 +43,7 @@ ggplot(data = gt_long_filtered_sample, aes(x = pos, y = chrom, color = factor(ge
     ) + 
   scale_color_manual(values = c("lightblue2" , "lightcoral")) +
   theme_classic() + 
-  facet_grid(sample_id~., scales = "free_x", space = "free_x")
+  facet_grid(.~sample_id, scales = "free_x", space = "free_x")
 ggsave("exercise3_allchromplot.png")
 
 ggplot(data = gt_long, aes(x = pos, y = chrom, color = factor(genotype))) +
